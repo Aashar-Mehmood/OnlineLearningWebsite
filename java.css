@@ -1,0 +1,228 @@
+main {
+	height: auto;
+}
+div.mainContainer {
+	font-size: 1rem;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+	width: 90vw;
+	height: auto;
+	margin:8% auto;
+	line-height: 1;
+	
+}
+div.mainContainer div.contentContainer,div.mainContainer div.detailContainer  {
+	
+	display: flex;
+	flex-flow: column;
+	padding: 4%;
+	border-radius: 10px;
+	
+}
+
+div.mainContainer div.contentContainer{
+	justify-content: space-evenly;
+	border-right: 1px solid black;
+	border: 1px solid black;
+	width: 42%;	
+}
+div.contentContainer>* {
+	margin-top: 3%;
+}
+
+div.rev ul {
+	display: flex;
+}
+
+div.contentContainer div.rev i {
+	color: yellow;
+	font-size: 1.3em;
+	padding-top: 0.5em;
+}
+div.contentContainer div.rev i.txt {
+	color: black;
+}
+
+div.contentContainer a {
+	padding: 0px;
+	display: block;
+	width: 182px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	background-color:#4d6cfa7d;
+	color: black;
+}
+
+div.contentContainer a:hover {
+	background-color:#4D6CFA;
+}
+
+div.contentContainer video {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	border: 2px solid red;
+	border-radius: 10px;
+	margin: 0px;
+}
+
+div.detailContainer {
+	background-color: aliceblue;
+	border: 1px solid black;
+	width: 55%;	
+}
+
+div.detailContainer div.list {
+	display: flex;
+	flex-flow: row;
+}
+div.list ul.first {
+	width:40%;
+}
+div.list ul.second {
+	width: 100%;
+	margin-left: 10%;
+	
+}
+
+div.detailContainer h2 {
+	text-align: center;
+}
+
+div.list ul li {
+	font-size: 1.2em;
+	padding: 1em 0;
+}
+
+
+
+div.detailContainer.order-reverse {
+	order: -1;
+}
+
+/*..........section.courses > div.courseCont > div.contItems styling.........*/
+/*//////////////////////////////////////////////////*/
+section.courses {
+	background-color: #f4f4f4;
+}
+div.courseCont{
+	width: 90vw;
+	height: auto;
+	margin: 5% auto;
+	margin-bottom: 0px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+div.courseCont div.contItems {
+	box-sizing: border-box;
+	width: 30%;
+	height: auto;
+	padding: 4%;
+	display: flex;
+	flex-flow: column;
+	font-size: 1em;
+	justify-content: space-evenly;
+}
+
+div.contItems video {
+	width: 100%;
+	border: 2px solid red;
+	border-radius: 5px;
+}
+
+div.contItems ul {
+	
+	margin-top: 3%;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+div.contItems ul i {
+	color: yellow;
+}
+div.contItems ul i.txt {
+	color:black;
+}
+
+div.contItems a {
+
+	margin-top: 3%;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color:#4d6cfa7d;
+}
+
+div.contItems h3 {
+	
+	margin-top: 3%;
+}
+div.contItems h3:nth-child(3){
+	font-size: 1.4rem;
+}
+section.main>a, section.courses>a
+{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	width: 220px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	margin-bottom: 7%;
+	margin-top: 4%;
+	background-color:#4d6cfa7d;
+	border-radius:10px 0px 10px 0px;
+	transition: all 0.7s ease-in-out;
+}
+section.main>a:hover, section.courses>a:hover {
+	background-color:#4D6CFA;
+	border-radius: 0px 10px 0px 10px;
+	color:black;
+}
+
+@media screen and (max-width: 1030px){
+	div.courseCont div.contItems{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	body,html {
+		font-size: 12px;
+	}
+	div.courseCont div.contItems{
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	section.main {
+		position: relative;
+		top: 15%;
+	}
+
+	div.mainContainer {
+		flex-flow: column;
+		justify-content: space-between;
+	}
+
+	section.courses {
+		position: relative;
+		top: 15%;
+	}
+	div.mainContainer div.contentContainer,div.mainContainer div.detailContainer{
+		width: 90%;
+		margin: 3% auto;
+	}
+
+	div.detailContainer.order-reverse{
+		order: 2;
+	}
+
+}
